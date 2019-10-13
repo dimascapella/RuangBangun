@@ -14,6 +14,8 @@ public class RuangBangunActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ruang_bangun);
     }
 
+
+
     @Override
     public void onBackPressed(){
         this.finish();

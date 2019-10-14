@@ -1,6 +1,7 @@
 package polinema.ac.id.rumusbangun.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,19 +34,19 @@ public class KerucutActivity extends AppCompatActivity implements LuasAlasKerucu
     }
 
     public void handlerClickLPKerucut(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_kerucut, luasPermukaanKerucut).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_kerucut, luasPermukaanKerucut).commit();
     }
 
     public void handlerClickVKerucut(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_kerucut, volumeKerucut).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_kerucut, volumeKerucut).commit();
     }
 
     public void handlerClickLAKerucut(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_kerucut, luasAlasKerucut).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_kerucut, luasAlasKerucut).commit();
     }
 
     public void handlerClickLSKerucut(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_kerucut, luasSelimutKerucut).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_kerucut, luasSelimutKerucut).commit();
     }
 
     @Override

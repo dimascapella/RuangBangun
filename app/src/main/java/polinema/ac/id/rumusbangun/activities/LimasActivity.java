@@ -1,6 +1,7 @@
 package polinema.ac.id.rumusbangun.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,19 +34,19 @@ public class LimasActivity extends AppCompatActivity implements SisiLimas.OnFrag
     }
 
     public void handlerClickLPLimas(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_limas, luasPermukaanLimas).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_limas, luasPermukaanLimas).commit();
     }
 
     public void handlerClickVLimas(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_limas, volumeLimas).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_limas, volumeLimas).commit();
     }
 
     public void handlerClickLALimas(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_limas, luasAlasLimas).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_limas, luasAlasLimas).commit();
     }
 
     public void handlerClickSisiLimas(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_limas, sisiLimas).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_limas, sisiLimas).commit();
     }
 
     @Override

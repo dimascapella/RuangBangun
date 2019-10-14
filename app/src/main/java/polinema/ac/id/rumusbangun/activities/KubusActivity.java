@@ -1,6 +1,7 @@
 package polinema.ac.id.rumusbangun.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,11 +42,11 @@ public class KubusActivity extends AppCompatActivity implements VolumeKubus.OnFr
     }
 
     public void handlerClickLPKubus(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_kubus, luasPermukaanKubus).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_kubus, luasPermukaanKubus).commit();
     }
 
     public void handlerClickVKubus(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_kubus, volumeKubus).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_kubus, volumeKubus).commit();
     }
 
     @Override

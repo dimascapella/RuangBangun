@@ -1,6 +1,7 @@
 package polinema.ac.id.rumusbangun.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,19 +34,19 @@ public class BalokActivity extends AppCompatActivity implements KelilingBalok.On
     }
 
     public void handlerClickLPBalok(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_balok, luasPermukaanBalok).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_balok, luasPermukaanBalok).commit();
     }
 
     public void handlerClickVBalok(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_balok, volumeBalok).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_balok, volumeBalok).commit();
     }
 
     public void handlerClickDgBalok(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_balok, diagonalBalok).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_balok, diagonalBalok).commit();
     }
 
     public void handlerClickKlBalok(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_balok, kelilingBalok).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_balok, kelilingBalok).commit();
     }
 
     @Override

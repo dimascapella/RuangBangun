@@ -1,6 +1,7 @@
 package polinema.ac.id.rumusbangun.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,24 +37,24 @@ public class TabungActivity extends AppCompatActivity implements LuasSelimutTabu
     }
 
     public void handlerClickLPTabung(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_tabung, luasPermukaanTabung).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_tabung, luasPermukaanTabung).commit();
     }
 
     public void handlerClickVTabung(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_tabung, volumeTabung).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_tabung, volumeTabung).commit();
     }
 
     public void handlerClickSelimutTabung(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_tabung, luasSelimutTabung).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_tabung, luasSelimutTabung).commit();
 
     }
 
     public void handlerClickKATabung(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_tabung, kelilingAlasTabung).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_tabung, kelilingAlasTabung).commit();
     }
 
     public void handlerClickLATabung(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_tabung, luasAlasTabung).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_tabung, luasAlasTabung).commit();
     }
 
     @Override

@@ -1,6 +1,7 @@
 package polinema.ac.id.rumusbangun.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,11 +27,11 @@ public class BolaActivity extends AppCompatActivity implements LuasPermukaanBola
     }
 
     public void handlerClickLPBola(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_bola, luasPermukaanBola).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_bola, luasPermukaanBola).commit();
     }
 
     public void handlerClickVBola(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_bola, volumeBola).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_bola, volumeBola).commit();
     }
 
     @Override

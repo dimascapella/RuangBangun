@@ -1,6 +1,7 @@
 package polinema.ac.id.rumusbangun.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,23 +43,23 @@ public class PrismaActivity extends AppCompatActivity implements LuasAlasPrisma.
     }
 
     public void handlerClickLPPrisma(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, luasPermukaanPrisma).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_prisma, luasPermukaanPrisma).commit();
     }
 
     public void handlerClickVPrisma(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, volumePrisma).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_prisma, volumePrisma).commit();
     }
 
     public void handlerClickSelimutPrisma(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, luasSelimutPrisma).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_prisma, luasSelimutPrisma).commit();
     }
 
     public void handlerClickKlPrisma(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, kelilingPrisma).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_prisma, kelilingPrisma).commit();
     }
 
     public void handlerClickLAPrisma(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, luasAlasPrisma).commit();
+        getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.frame_prisma, luasAlasPrisma).commit();
     }
 
     @Override

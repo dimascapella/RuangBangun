@@ -48,9 +48,9 @@ public class KelilingBalok extends Fragment {
                     String strklTinggi = klTinggiBalok.getText().toString();
                     String strklLebar = klLebarBalok.getText().toString();
                     if(!TextUtils.isEmpty(strklPanjang) && !TextUtils.isEmpty(strklLebar) && !TextUtils.isEmpty(strklTinggi)){
-                        int intklPanjang = Integer.parseInt(strklPanjang);
-                        int intklTinggi = Integer.parseInt(strklTinggi);
-                        int intklLebar = Integer.parseInt(strklLebar);
+                        float intklPanjang = (float) Double.parseDouble(strklPanjang);
+                        float intklTinggi = (float) Double.parseDouble(strklTinggi);
+                        float intklLebar = (float) Double.parseDouble(strklLebar);
                         rumus r = new rumus();
                         r.kelilingBalok(intklPanjang, intklLebar, intklTinggi);
                         mListener.hitungKelilingBalok(r.getHasil());

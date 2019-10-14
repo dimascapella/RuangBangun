@@ -46,8 +46,8 @@ public class LuasSelimutTabung extends Fragment {
                     String strjari = jari.getText().toString();
                     String strtinggi = tinggi.getText().toString();
                     if(!TextUtils.isEmpty(strjari) && !TextUtils.isEmpty(strtinggi)){
-                        int intJari = Integer.parseInt(strjari);
-                        int intTinggi = Integer.parseInt(strtinggi);
+                        float intJari = (float) Double.parseDouble(strjari);
+                        float intTinggi = (float) Double.parseDouble(strtinggi);
                         rumus r = new rumus();
                         r.lSelimutTabung(intJari, intTinggi);
                         mListener.hitungLuasSelimutTabung(r.getHasil());

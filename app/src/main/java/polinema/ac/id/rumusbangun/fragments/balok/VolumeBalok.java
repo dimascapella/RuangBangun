@@ -48,9 +48,9 @@ public class VolumeBalok extends Fragment {
                     String strvTinggi = vTinggiBalok.getText().toString();
                     String strvLebar = vLebarBalok.getText().toString();
                     if(!TextUtils.isEmpty(strvPanjang) && !TextUtils.isEmpty(strvLebar) && !TextUtils.isEmpty(strvTinggi)){
-                        int intvPanjang = Integer.parseInt(strvPanjang);
-                        int intvTinggi = Integer.parseInt(strvTinggi);
-                        int intvLebar = Integer.parseInt(strvLebar);
+                        float intvPanjang = (float) Double.parseDouble(strvPanjang);
+                        float intvTinggi = (float) Double.parseDouble(strvTinggi);
+                        float intvLebar = (float) Double.parseDouble(strvLebar);
                         rumus r = new rumus();
                         r.vBalok(intvPanjang, intvLebar, intvTinggi);
                         mListener.hitungVolumeBalok(r.getHasil());

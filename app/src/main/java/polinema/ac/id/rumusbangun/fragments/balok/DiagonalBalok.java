@@ -48,9 +48,9 @@ public class DiagonalBalok extends Fragment {
                     String strdgTinggi = dgTinggiBalok.getText().toString();
                     String strdgLebar = dgLebarBalok.getText().toString();
                     if(!TextUtils.isEmpty(strdgPanjang) && !TextUtils.isEmpty(strdgLebar) && !TextUtils.isEmpty(strdgTinggi)){
-                        int intdgPanjang = Integer.parseInt(strdgPanjang);
-                        int intdgTinggi = Integer.parseInt(strdgTinggi);
-                        int intdgLebar = Integer.parseInt(strdgLebar);
+                        float intdgPanjang = (float) Double.parseDouble(strdgPanjang);
+                        float intdgTinggi = (float) Double.parseDouble(strdgTinggi);
+                        float intdgLebar = (float) Double.parseDouble(strdgLebar);
                         rumus r = new rumus();
                         r.diagonalBalok(intdgPanjang, intdgLebar, intdgTinggi);
                         mListener.hitungDiagonalBalok(r.getHasil());

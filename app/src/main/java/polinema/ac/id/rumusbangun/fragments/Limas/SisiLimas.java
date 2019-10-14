@@ -46,8 +46,8 @@ public class SisiLimas extends Fragment {
                     String strAlas= Alas.getText().toString();
                     String strTinggi= tinggi.getText().toString();
                     if(!TextUtils.isEmpty(strAlas) && !TextUtils.isEmpty(strTinggi)){
-                        int intAlas = Integer.parseInt(strAlas);
-                        int intTinggi = Integer.parseInt(strTinggi);
+                        float intAlas = (float) Double.parseDouble(strAlas);
+                        float intTinggi = (float) Double.parseDouble(strTinggi);
                         rumus r = new rumus();
                         r.sisiLimas(intAlas, intTinggi);
                         mListener.hitungSisiLimas(r.getHasil());

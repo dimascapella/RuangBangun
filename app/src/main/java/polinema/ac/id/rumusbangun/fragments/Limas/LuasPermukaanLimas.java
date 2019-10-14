@@ -50,10 +50,10 @@ public class LuasPermukaanLimas extends Fragment {
                     String strSisi2= sisi2.getText().toString();
                     String strSisi3= sisi3.getText().toString();
                     if(!TextUtils.isEmpty(strLuasAlas) && !TextUtils.isEmpty(strSisi1) && !TextUtils.isEmpty(strSisi2) && !TextUtils.isEmpty(strSisi3)){
-                        int intLuasAlas = Integer.parseInt(strLuasAlas);
-                        int intS1 = Integer.parseInt(strSisi1);
-                        int intS2 = Integer.parseInt(strSisi2);
-                        int intS3 = Integer.parseInt(strSisi3);
+                        float intLuasAlas = (float) Double.parseDouble(strLuasAlas);
+                        float intS1 = (float) Double.parseDouble(strSisi1);
+                        float intS2 = (float) Double.parseDouble(strSisi2);
+                        float intS3 = (float) Double.parseDouble(strSisi3);
                         rumus r = new rumus();
                         r.lpLimas(intLuasAlas, intS1, intS2, intS3);
                         mListener.hitungLuasPermukaanLimas(r.getHasil());

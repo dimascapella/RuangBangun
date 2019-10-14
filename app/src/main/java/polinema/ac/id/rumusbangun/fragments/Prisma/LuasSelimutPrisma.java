@@ -46,8 +46,8 @@ public class LuasSelimutPrisma extends Fragment {
                     String strPanjang = panjang.getText().toString();
                     String strLebar = lebar.getText().toString();
                     if(!TextUtils.isEmpty(strPanjang) && !TextUtils.isEmpty(strLebar)){
-                        int intPanjang = Integer.parseInt(strPanjang);
-                        int intLebar = Integer.parseInt(strLebar);
+                        float intPanjang = (float) Double.parseDouble(strPanjang);
+                        float intLebar = (float) Double.parseDouble(strLebar);
                         rumus r = new rumus();
                         r.lSelimutPrisma(intPanjang, intLebar);
                         mListener.hitungLuasSelimutPrisma(r.getHasil());

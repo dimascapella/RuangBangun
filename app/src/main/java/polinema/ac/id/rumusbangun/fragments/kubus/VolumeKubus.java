@@ -44,7 +44,7 @@ public class VolumeKubus extends Fragment {
                 if(mListener != null){
                     String strVSisi = vSisi.getText().toString();
                     if(!TextUtils.isEmpty(strVSisi)){
-                        int intVSisi = Integer.parseInt(strVSisi);
+                        float intVSisi = (float) Double.parseDouble(strVSisi);
                         rumus r = new rumus();
                         r.vKubus(intVSisi);
                         mListener.hitungVolumeKubus(r.getHasil());

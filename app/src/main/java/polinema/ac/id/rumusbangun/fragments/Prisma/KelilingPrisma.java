@@ -44,7 +44,7 @@ public class KelilingPrisma extends Fragment {
                 if(mListener != null){
                     String strSisi = sisi.getText().toString();
                     if(!TextUtils.isEmpty(strSisi)){
-                        int intSisi = Integer.parseInt(strSisi);
+                        float intSisi = (float) Double.parseDouble(strSisi);
                         rumus r = new rumus();
                         r.kelilingPrisma(intSisi);
                         mListener.hitungKelilingPrisma(r.getHasil());

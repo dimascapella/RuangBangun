@@ -48,9 +48,9 @@ public class LuasPermukaanPrisma extends Fragment {
                     String strKelilingAlas= lpKelilingAlas.getText().toString();
                     String strTinggi = lpTinggi.getText().toString();
                     if(!TextUtils.isEmpty(strLuasAlas) && !TextUtils.isEmpty(strKelilingAlas) && !TextUtils.isEmpty(strTinggi)){
-                        int intLuasAlas = Integer.parseInt(strLuasAlas);
-                        int intKelilingAlas = Integer.parseInt(strKelilingAlas);
-                        int intTinggi = Integer.parseInt(strTinggi);
+                        float intLuasAlas = (float) Double.parseDouble(strLuasAlas);
+                        float intKelilingAlas = (float) Double.parseDouble(strKelilingAlas);
+                        float intTinggi = (float) Double.parseDouble(strTinggi);
                         rumus r = new rumus();
                         r.lpPrisma(intLuasAlas, intKelilingAlas, intTinggi);
                         mListener.hitungLuasPermukaanPrisma(r.getHasil());

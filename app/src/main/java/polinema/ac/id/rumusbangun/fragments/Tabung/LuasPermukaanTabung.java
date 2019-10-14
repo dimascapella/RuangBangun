@@ -46,8 +46,8 @@ public class LuasPermukaanTabung extends Fragment {
                     String strLuasAlas= luasAlas.getText().toString();
                     String strLuasSelimut= luasSelimut.getText().toString();
                     if(!TextUtils.isEmpty(strLuasAlas) && !TextUtils.isEmpty(strLuasSelimut)){
-                        int intLuasAlas = Integer.parseInt(strLuasAlas);
-                        int intLuasSelimut = Integer.parseInt(strLuasSelimut);
+                        float intLuasAlas = (float) Double.parseDouble(strLuasAlas);
+                        float intLuasSelimut = (float) Double.parseDouble(strLuasSelimut);
                         rumus r = new rumus();
                         r.lpTabung(intLuasAlas, intLuasSelimut);
                         mListener.hitungLuasPermukaanTabung(r.getHasil());

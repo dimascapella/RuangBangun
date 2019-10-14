@@ -44,7 +44,7 @@ public class LuasPermukaanKubus extends Fragment {
                 if(mListener != null){
                     String strlpSisi = lpSisi.getText().toString();
                     if(!TextUtils.isEmpty(strlpSisi)){
-                        int intlpSisi = Integer.parseInt(strlpSisi);
+                        float intlpSisi = (float) Double.parseDouble(strlpSisi);
                         rumus r = new rumus();
                         r.lpKubus(intlpSisi);
                         mListener.hitungLuasPermukaanKubus(r.getHasil());

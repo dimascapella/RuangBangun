@@ -46,8 +46,8 @@ public class VolumeLimas extends Fragment {
                     String strLuasAlas= luasAlas.getText().toString();
                     String strTinggi= tinggi.getText().toString();
                     if(!TextUtils.isEmpty(strLuasAlas) && !TextUtils.isEmpty(strTinggi)){
-                        int intLuasAlas = Integer.parseInt(strLuasAlas);
-                        int intTinggi = Integer.parseInt(strTinggi);
+                        float intLuasAlas = (float) Double.parseDouble(strLuasAlas);
+                        float intTinggi = (float) Double.parseDouble(strTinggi);
                         rumus r = new rumus();
                         r.vLimas(intLuasAlas, intTinggi);
                         mListener.hitungVolumeLimas(r.getHasil());

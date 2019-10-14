@@ -48,9 +48,9 @@ public class LuasPermukaanBalok extends Fragment {
                     String strlpTinggi = lpTinggiBalok.getText().toString();
                     String strlpLebar = lpLebarBalok.getText().toString();
                     if(!TextUtils.isEmpty(strlpPanjang) && !TextUtils.isEmpty(strlpLebar) && !TextUtils.isEmpty(strlpTinggi)){
-                        int intlpPanjang = Integer.parseInt(strlpPanjang);
-                        int intlpTinggi = Integer.parseInt(strlpTinggi);
-                        int intlpLebar = Integer.parseInt(strlpLebar);
+                        float intlpPanjang = (float) Double.parseDouble(strlpPanjang);
+                        float intlpTinggi = (float) Double.parseDouble(strlpTinggi);
+                        float intlpLebar = (float) Double.parseDouble(strlpLebar);
                         rumus r = new rumus();
                         r.lpBalok(intlpPanjang, intlpLebar, intlpTinggi);
                         mListener.hitungLuasPermukaanBalok(r.getHasil());

@@ -48,9 +48,9 @@ public class VolumePrisma extends Fragment {
                     String strGarisTengah= vGarisTengahPrisma.getText().toString();
                     String strTinggi = vTinggiPrisma.getText().toString();
                     if(!TextUtils.isEmpty(strAlas) && !TextUtils.isEmpty(strGarisTengah) && !TextUtils.isEmpty(strTinggi)){
-                        int intAlas = Integer.parseInt(strAlas);
-                        int intGarisTengah = Integer.parseInt(strGarisTengah);
-                        int intTinggi = Integer.parseInt(strTinggi);
+                        float intAlas = (float) Double.parseDouble(strAlas);
+                        float intGarisTengah = (float) Double.parseDouble(strGarisTengah);
+                        float intTinggi = (float) Double.parseDouble(strTinggi);
                         rumus r = new rumus();
                         r.vPrisma(intAlas, intGarisTengah, intTinggi);
                         mListener.hitungVolumePrisma(r.getHasil());

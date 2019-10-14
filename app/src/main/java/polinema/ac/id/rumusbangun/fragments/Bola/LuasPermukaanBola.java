@@ -44,9 +44,9 @@ public class LuasPermukaanBola extends Fragment {
                 if(mListener != null){
                     String strjari = jari.getText().toString();
                     if(!TextUtils.isEmpty(strjari)){
-                        int intJari = Integer.parseInt(strjari);
+                        float jari = (float) Double.parseDouble(strjari);
                         rumus r = new rumus();
-                        r.lpBola(intJari);
+                        r.lpBola(jari);
                         mListener.hitungLuasPermukaanBola(r.getHasil());
                     }else{
                         Toast.makeText(getActivity(), "Invalid Request!", Toast.LENGTH_SHORT).show();

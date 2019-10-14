@@ -26,4 +26,9 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(new Intent(MenuActivity.this, RuangDatarActivity.class));
         overridePendingTransition(R.anim.slide_left,R.anim.slide_right);
     }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+    }
 }

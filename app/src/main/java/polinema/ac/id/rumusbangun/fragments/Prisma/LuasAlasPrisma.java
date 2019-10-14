@@ -46,8 +46,8 @@ public class LuasAlasPrisma extends Fragment {
                     String strVolume = volume.getText().toString();
                     String strTinggi = tinggi.getText().toString();
                     if(!TextUtils.isEmpty(strVolume) && !TextUtils.isEmpty(strTinggi)){
-                        int intVolume = Integer.parseInt(strVolume);
-                        int intTinggi = Integer.parseInt(strTinggi);
+                        float intVolume = (float) Double.parseDouble(strVolume);
+                        float intTinggi = (float) Double.parseDouble(strTinggi);
                         rumus r = new rumus();
                         r.lAlasPrisma(intVolume, intTinggi);
                         mListener.hitungLuasAlasPrisma(r.getHasil());

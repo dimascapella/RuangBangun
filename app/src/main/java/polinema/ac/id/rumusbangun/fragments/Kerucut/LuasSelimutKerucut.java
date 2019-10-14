@@ -46,8 +46,8 @@ public class LuasSelimutKerucut extends Fragment {
                     String strjari = jari.getText().toString();
                     String strgarisPelukis = garisPelukis.getText().toString();
                     if(!TextUtils.isEmpty(strjari) && !TextUtils.isEmpty(strgarisPelukis)){
-                        int intJari = Integer.parseInt(strjari);
-                        int intGarisPelukis = Integer.parseInt(strgarisPelukis);
+                        float intJari = (float) Double.parseDouble(strjari);
+                        float intGarisPelukis = (float) Double.parseDouble(strgarisPelukis);
                         rumus r = new rumus();
                         r.lSelimutKerucut(intJari, intGarisPelukis);
                         mListener.hitungLuasSelimutKerucut(r.getHasil());

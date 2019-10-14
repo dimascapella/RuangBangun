@@ -44,7 +44,7 @@ public class LuasAlasKerucut extends Fragment {
                 if(mListener != null){
                     String strjari = jari.getText().toString();
                     if(!TextUtils.isEmpty(strjari)){
-                        int intJari = Integer.parseInt(strjari);
+                        float intJari = (float) Double.parseDouble(strjari);
                         rumus r = new rumus();
                         r.lAlasKerucut(intJari);
                         mListener.hitungLuasAlasKerucut(r.getHasil());

@@ -25,5 +25,16 @@ public class RuangBangunActivity extends AppCompatActivity {
 
     public void handlerKubusActivity(View view) {
         startActivity(new Intent(RuangBangunActivity.this, KubusActivity.class));
+        finish();
+    }
+
+    public void handlerBalokActivity(View view) {
+        startActivity(new Intent(RuangBangunActivity.this, BalokActivity.class));
+        finish();
+    }
+
+    public void handlerClickPrismaActivity(View view) {
+        startActivity(new Intent(RuangBangunActivity.this, PrismaActivity.class));
+        finish();
     }
 }

@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/white"
-        android:text="Luas Permukaan Kubus"
+        android:text="Luas Permukaan Prisma"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,9 +40,9 @@
         android:layout_height="66dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="Masukkan Sisi"
+        android:text="luas alas"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
@@ -50,26 +50,25 @@
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <EditText
-        android:id="@+id/txt_lpSisi_kubus"
+        android:id="@+id/txt_lplaPrisma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="110dp"
-        android:textColor="@color/white"
-        android:hint="Dalam centimeter"
+        android:layout_marginTop="60dp"
         android:ems="10"
+        android:hint="Dalam centimeter"
         android:inputType="number"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <Button
-        android:id="@+id/calculate_lpKubus"
+        android:id="@+id/calculate_lpPrisma"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
@@ -77,5 +76,63 @@
         android:text="Hitung"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lptiPrisma" />
+
+    <TextView
+        android:id="@+id/vLebar_Balok"
+        android:layout_width="133dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="keliling alas"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vPanjang_balok" />
+
+    <EditText
+        android:id="@+id/txt_lpkaPrisma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Dalam centimeter"
+        android:inputType="number"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lplaPrisma" />
+
+    <TextView
+        android:id="@+id/vTinggi_balok"
+        android:layout_width="133dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Tinggi"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vLebar_Balok" />
+
+    <EditText
+        android:id="@+id/txt_lptiPrisma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Dalam centimeter"
+        android:inputType="number"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lpkaPrisma" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

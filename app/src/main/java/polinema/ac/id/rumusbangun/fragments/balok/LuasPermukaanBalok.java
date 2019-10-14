@@ -1,4 +1,4 @@
-package polinema.ac.id.rumusbangun.fragments;
+package polinema.ac.id.rumusbangun.fragments.balok;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -19,14 +19,14 @@ import polinema.ac.id.rumusbangun.utils.rumus;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link LuasPermukaanKubus.OnFragmentInteractionListener} interface
+ * {@link LuasPermukaanBalok.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class LuasPermukaanKubus extends Fragment {
+public class LuasPermukaanBalok extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public LuasPermukaanKubus() {
+    public LuasPermukaanBalok() {
         // Required empty public constructor
     }
 
@@ -35,21 +35,27 @@ public class LuasPermukaanKubus extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_luas_permukaan_kubus, container, false);
-        final EditText lpSisi = view.findViewById(R.id.txt_lpSisi);
-        Button calculation = view.findViewById(R.id.calculate_lpKubus);
+        View view = inflater.inflate(R.layout.fragment_luas_permukaan_balok, container, false);
+        final EditText lpPanjangBalok = view.findViewById(R.id.txt_lpPanBalok);
+        final EditText lpLebarBalok = view.findViewById(R.id.txt_lpleBalok);
+        final EditText lpTinggiBalok = view.findViewById(R.id.txt_lptiBalok);
+        Button calculation = view.findViewById(R.id.calculate_lpBalok);
         calculation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(mListener != null){
-                    String strlpSisi = lpSisi.getText().toString();
-                    if(!TextUtils.isEmpty(strlpSisi)){
-                        int intlpSisi = Integer.parseInt(strlpSisi);
+                    String strlpPanjang = lpPanjangBalok.getText().toString();
+                    String strlpTinggi = lpTinggiBalok.getText().toString();
+                    String strlpLebar = lpLebarBalok.getText().toString();
+                    if(!TextUtils.isEmpty(strlpPanjang) && !TextUtils.isEmpty(strlpLebar) && !TextUtils.isEmpty(strlpTinggi)){
+                        int intlpPanjang = Integer.parseInt(strlpPanjang);
+                        int intlpTinggi = Integer.parseInt(strlpTinggi);
+                        int intlpLebar = Integer.parseInt(strlpLebar);
                         rumus r = new rumus();
-                        r.lpKubus(intlpSisi);
-                        mListener.hitungLuasPermukaanKubus(r.getHasil());
+                        r.lpBalok(intlpPanjang, intlpLebar, intlpTinggi);
+                        mListener.hitungLuasPermukaanBalok(r.getHasil());
                     }else{
-                        Toast.makeText(getActivity(), "Input your weight and height please", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Invalid Request!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -57,7 +63,6 @@ public class LuasPermukaanKubus extends Fragment {
 
         return view;
     }
-
 
     @Override
     public void onAttach(Context context) {
@@ -88,6 +93,6 @@ public class LuasPermukaanKubus extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void hitungLuasPermukaanKubus(float hasil);
+        void hitungLuasPermukaanBalok(float hasil);
     }
 }

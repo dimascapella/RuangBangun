@@ -21,7 +21,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
-            android:onClick="handlerClickLPKubus"
+            android:onClick="handlerClickLPBalok"
             android:layout_marginRight="30dp"
             android:background="@color/white"
             android:text="Luas Permukaan"
@@ -34,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/white"
-            android:text="Kubus"
+            android:text="Balok"
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.3" />
+            app:layout_constraintGuide_percent="0.44" />
 
         <Button
             android:id="@+id/btn_vKubus"
@@ -65,14 +65,14 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:background="@color/white"
-            android:onClick="handlerClickVKubus"
+            android:onClick="handlerClickVBalok"
             android:text="Volume"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_lpKubus" />
 
         <FrameLayout
-            android:id="@+id/frame_kubus"
+            android:id="@+id/frame_balok"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
@@ -92,7 +92,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="846dp" />
+            app:layout_constraintGuide_begin="999dp" />
+
+        <Button
+            android:id="@+id/btn_dgBalok"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:onClick="handlerClickDgBalok"
+            android:text="Diagonal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vKubus" />
+
+        <Button
+            android:id="@+id/btn_klBalok"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:onClick="handlerClickKlBalok"
+            android:text="Keliling"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dgBalok" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

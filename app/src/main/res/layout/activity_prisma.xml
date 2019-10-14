@@ -14,14 +14,14 @@
         tools:context=".activities.KubusActivity">
 
         <Button
-            android:id="@+id/btn_lpKubus"
+            android:id="@+id/btn_lpPrisma"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
-            android:onClick="handlerClickLPKubus"
+            android:onClick="handlerClickLPPrisma"
             android:layout_marginRight="30dp"
             android:background="@color/white"
             android:text="Luas Permukaan"
@@ -34,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/white"
-            android:text="Kubus"
+            android:text="Prisma"
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,10 +53,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.3" />
+            app:layout_constraintGuide_percent="0.46" />
 
         <Button
-            android:id="@+id/btn_vKubus"
+            android:id="@+id/btn_vPrisma"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="30dp"
@@ -65,14 +65,14 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:background="@color/white"
-            android:onClick="handlerClickVKubus"
+            android:onClick="handlerClickVPrisma"
             android:text="Volume"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_lpKubus" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_lpPrisma" />
 
         <FrameLayout
-            android:id="@+id/frame_kubus"
+            android:id="@+id/frame_prisma"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
@@ -92,7 +92,55 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="846dp" />
+            app:layout_constraintGuide_begin="1043dp" />
+
+        <Button
+            android:id="@+id/btn_dgPrisma"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:onClick="handlerClickSelimutPrisma"
+            android:text="Luas Selimut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vPrisma" />
+
+        <Button
+            android:id="@+id/btn_klPrisma"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:onClick="handlerClickKlPrisma"
+            android:text="Keliling"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dgPrisma" />
+
+        <Button
+            android:id="@+id/btn_laPrisma"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:onClick="handlerClickLAPrisma"
+            android:text="Luas Alas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_klPrisma" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

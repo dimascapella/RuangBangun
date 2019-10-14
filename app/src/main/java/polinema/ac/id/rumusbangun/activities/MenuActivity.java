@@ -20,10 +20,12 @@ public class MenuActivity extends AppCompatActivity {
     public void handlerClickRuangBangun(View view) {
         startActivity(new Intent(MenuActivity.this, RuangBangunActivity.class));
         overridePendingTransition(R.anim.slide_left, R.anim.slide_left);
+        finish();
     }
 
     public void handlerClickRuangDatar(View view) {
         startActivity(new Intent(MenuActivity.this, RuangDatarActivity.class));
         overridePendingTransition(R.anim.slide_left, R.anim.slide_left);
+        finish();
     }
 }

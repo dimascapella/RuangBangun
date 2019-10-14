@@ -55,4 +55,9 @@ public class KubusActivity extends AppCompatActivity implements VolumeKubus.OnFr
         hasilFragment.setRumus("Rumus = sisi x sisi x sisi");
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_kubus, hasilFragment).commit();
     }
+
+    @Override
+    public void onBackPressed(){
+        this.finish();
+    }
 }

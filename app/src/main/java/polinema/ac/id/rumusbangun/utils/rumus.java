@@ -77,14 +77,6 @@ public class rumus {
         return hasil = (float) phi * 2 * r;
     }
 
-    public float luasSisiKubus(float sisi){
-        return hasil = (float) (Math.pow(sisi,2));
-    }
-
-    public float kelilingKubus(float sisi){
-        return hasil = 12*sisi;
-    }
-
     public float lpKubus(float sisi){
         return hasil = (float) (Math.pow(sisi,2)) * 6;
     }
@@ -117,6 +109,10 @@ public class rumus {
         return hasil = (alas * tinggi) / 2;
     }
 
+    public float sisiLimas(float alas, float tinggi){
+        return hasil = (alas * tinggi) / 2;
+    }
+
     public float lpLimas(float luas_alas, float sisi1, float sisi2, float sisi3){
         return hasil = luas_alas + sisi1 + sisi2 + sisi3;
     }
@@ -125,7 +121,7 @@ public class rumus {
         return hasil = (float) (4 * phi * (Math.pow(r,3))) / 3;
     }
 
-    public float lBola(float r){
+    public float lpBola(float r){
         return hasil = (float) (4 * phi * (Math.pow(r,2)));
     }
 

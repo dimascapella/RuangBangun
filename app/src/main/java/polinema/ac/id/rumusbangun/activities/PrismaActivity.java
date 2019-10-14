@@ -8,14 +8,20 @@ import android.view.View;
 
 import polinema.ac.id.rumusbangun.R;
 import polinema.ac.id.rumusbangun.fragments.HasilFragment;
-import polinema.ac.id.rumusbangun.fragments.LuasPermukaanPrisma;
-import polinema.ac.id.rumusbangun.fragments.VolumePrisma;
+import polinema.ac.id.rumusbangun.fragments.Prisma.KelilingPrisma;
+import polinema.ac.id.rumusbangun.fragments.Prisma.LuasAlasPrisma;
+import polinema.ac.id.rumusbangun.fragments.Prisma.LuasPermukaanPrisma;
+import polinema.ac.id.rumusbangun.fragments.Prisma.LuasSelimutPrisma;
+import polinema.ac.id.rumusbangun.fragments.Prisma.VolumePrisma;
 
-public class PrismaActivity extends AppCompatActivity implements LuasPermukaanPrisma.OnFragmentInteractionListener,HasilFragment.OnFragmentInteractionListener, VolumePrisma.OnFragmentInteractionListener {
+public class PrismaActivity extends AppCompatActivity implements LuasAlasPrisma.OnFragmentInteractionListener,KelilingPrisma.OnFragmentInteractionListener,LuasSelimutPrisma.OnFragmentInteractionListener, LuasPermukaanPrisma.OnFragmentInteractionListener,HasilFragment.OnFragmentInteractionListener, VolumePrisma.OnFragmentInteractionListener {
 
     private HasilFragment hasilFragment;
     private VolumePrisma volumePrisma;
     private LuasPermukaanPrisma luasPermukaanPrisma;
+    private LuasSelimutPrisma luasSelimutPrisma;
+    private KelilingPrisma kelilingPrisma;
+    private LuasAlasPrisma luasAlasPrisma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,9 @@ public class PrismaActivity extends AppCompatActivity implements LuasPermukaanPr
         hasilFragment = new HasilFragment();
         volumePrisma = new VolumePrisma();
         luasPermukaanPrisma = new LuasPermukaanPrisma();
+        luasSelimutPrisma = new LuasSelimutPrisma();
+        kelilingPrisma = new KelilingPrisma();
+        luasAlasPrisma = new LuasAlasPrisma();
     }
 
     @Override
@@ -41,12 +50,15 @@ public class PrismaActivity extends AppCompatActivity implements LuasPermukaanPr
     }
 
     public void handlerClickSelimutPrisma(View view) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, luasSelimutPrisma).commit();
     }
 
     public void handlerClickKlPrisma(View view) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, kelilingPrisma).commit();
     }
 
     public void handlerClickLAPrisma(View view) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, luasAlasPrisma).commit();
     }
 
     @Override
@@ -63,5 +75,34 @@ public class PrismaActivity extends AppCompatActivity implements LuasPermukaanPr
         hasilFragment.setHasil(String.format("Hasil Perhitungan %.2f", hasil));
         hasilFragment.setRumus("Rumus = (2 x luas alas) + (keliling alas x tinggi)");
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, hasilFragment).commit();
+    }
+
+    @Override
+    public void hitungLuasSelimutPrisma(float hasil) {
+        hasilFragment.setInformation("Hasil Luas Selimut Prisma");
+        hasilFragment.setHasil(String.format("Hasil Perhitungan %.2f", hasil));
+        hasilFragment.setRumus("Rumus = panjang x lebar");
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, hasilFragment).commit();
+    }
+
+    @Override
+    public void hitungKelilingPrisma(float hasil) {
+        hasilFragment.setInformation("Hasil Keliling Alas Prisma");
+        hasilFragment.setHasil(String.format("Hasil Perhitungan %.2f", hasil));
+        hasilFragment.setRumus("Rumus = sisi x sisi x sisi");
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, hasilFragment).commit();
+    }
+
+    @Override
+    public void hitungLuasAlasPrisma(float hasil) {
+        hasilFragment.setInformation("Hasil Luas Alas Prisma");
+        hasilFragment.setHasil(String.format("Hasil Perhitungan %.2f", hasil));
+        hasilFragment.setRumus("Rumus = volume / tinggi");
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_prisma, hasilFragment).commit();
+    }
+
+    @Override
+    public void onBackPressed(){
+        this.finish();
     }
 }

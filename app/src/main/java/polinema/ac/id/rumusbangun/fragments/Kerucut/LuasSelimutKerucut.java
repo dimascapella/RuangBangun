@@ -1,7 +1,6 @@
-package polinema.ac.id.rumusbangun.fragments;
+package polinema.ac.id.rumusbangun.fragments.Kerucut;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -20,14 +19,14 @@ import polinema.ac.id.rumusbangun.utils.rumus;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link LuasPermukaanPrisma.OnFragmentInteractionListener} interface
+ * {@link LuasSelimutKerucut.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class LuasPermukaanPrisma extends Fragment {
+public class LuasSelimutKerucut extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public LuasPermukaanPrisma() {
+    public LuasSelimutKerucut() {
         // Required empty public constructor
     }
 
@@ -36,25 +35,22 @@ public class LuasPermukaanPrisma extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_luas_permukaan_prisma, container, false);
-        final EditText lpLuasAlas = view.findViewById(R.id.txt_lplaPrisma);
-        final EditText lpKelilingAlas = view.findViewById(R.id.txt_lpkaPrisma);
-        final EditText lpTinggi = view.findViewById(R.id.txt_lptiPrisma);
-        Button calculation = view.findViewById(R.id.calculate_lpPrisma);
+        View view = inflater.inflate(R.layout.fragment_luas_selimut_kerucut, container, false);
+        final EditText jari = view.findViewById(R.id.txt_lsJariKerucut);
+        final EditText garisPelukis = view.findViewById(R.id.txt_lsgpKerucut);
+        Button calculation = view.findViewById(R.id.calculate_lsKerucut);
         calculation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(mListener != null){
-                    String strLuasAlas= lpLuasAlas.getText().toString();
-                    String strKelilingAlas= lpKelilingAlas.getText().toString();
-                    String strTinggi = lpTinggi.getText().toString();
-                    if(!TextUtils.isEmpty(strLuasAlas) && !TextUtils.isEmpty(strKelilingAlas) && !TextUtils.isEmpty(strTinggi)){
-                        int intLuasAlas = Integer.parseInt(strLuasAlas);
-                        int intKelilingAlas = Integer.parseInt(strKelilingAlas);
-                        int intTinggi = Integer.parseInt(strTinggi);
+                    String strjari = jari.getText().toString();
+                    String strgarisPelukis = garisPelukis.getText().toString();
+                    if(!TextUtils.isEmpty(strjari) && !TextUtils.isEmpty(strgarisPelukis)){
+                        int intJari = Integer.parseInt(strjari);
+                        int intGarisPelukis = Integer.parseInt(strgarisPelukis);
                         rumus r = new rumus();
-                        r.lpPrisma(intLuasAlas, intKelilingAlas, intTinggi);
-                        mListener.hitungLuasPermukaanPrisma(r.getHasil());
+                        r.lSelimutKerucut(intJari, intGarisPelukis);
+                        mListener.hitungLuasSelimutKerucut(r.getHasil());
                     }else{
                         Toast.makeText(getActivity(), "Invalid Request!", Toast.LENGTH_SHORT).show();
                     }
@@ -94,6 +90,6 @@ public class LuasPermukaanPrisma extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void hitungLuasPermukaanPrisma(float hasil);
+        void hitungLuasSelimutKerucut(float hasil);
     }
 }

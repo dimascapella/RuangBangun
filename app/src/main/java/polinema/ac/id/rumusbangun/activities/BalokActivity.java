@@ -85,4 +85,9 @@ public class BalokActivity extends AppCompatActivity implements KelilingBalok.On
         hasilFragment.setRumus("Rumus = 4 x ( panjang + lebar + tinggi )");
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_balok, hasilFragment).commit();
     }
+
+    @Override
+    public void onBackPressed(){
+        this.finish();
+    }
 }

@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PrismaActivity"></activity>
+        <activity android:name=".activities.BolaActivity"></activity>
+        <activity android:name=".activities.KerucutActivity" />
+        <activity android:name=".activities.TabungActivity" />
+        <activity android:name=".activities.LimasActivity" />
+        <activity android:name=".activities.PrismaActivity" />
         <activity android:name=".activities.BalokActivity" />
         <activity android:name=".activities.KubusActivity" />
         <activity android:name=".activities.RuangDatarActivity" />

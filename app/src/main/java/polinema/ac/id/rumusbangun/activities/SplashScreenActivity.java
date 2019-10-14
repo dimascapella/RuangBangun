@@ -17,7 +17,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(SplashScreenActivity.this, MenuActivity.class));
-                overridePendingTransition(R.anim.slide_left,R.anim.slide_left);
+                overridePendingTransition(R.anim.slide_left,R.anim.slide_right);
                 finish();
             }
         }, 3000);

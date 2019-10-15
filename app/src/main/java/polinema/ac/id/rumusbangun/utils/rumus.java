@@ -29,19 +29,18 @@ public class rumus {
     }
 
     public float luasSegitigaSiku(float alas, float tinggi){
-        return hasil = (float) 0.5 * alas * tinggi;
+        return hasil = (alas * tinggi) / 2;
     }
 
     public float kelilingSegitigaSiku(float alas, float tinggi, float lebar){
         return hasil = alas + tinggi + lebar;
     }
 
-    public float luasSegitigaKakiSisi(float alas, float tinggi, float lebar){
-        float s = (float) 0.5*(alas + tinggi + lebar);
-        return hasil = (float) (Math.sqrt(s * (s - alas) * (s - tinggi) * (s - lebar)));
+    public float luasSegitigaSisi(float alas, float tinggi){
+        return hasil = (alas * tinggi) / 2;
     }
 
-    public float kelilingSegitigakakiSisi(float alas, float tinggi, float lebar){
+    public float kelilingSegitigaSisi(float alas, float tinggi, float lebar){
         return hasil = alas + tinggi + lebar;
     }
 
@@ -61,11 +60,11 @@ public class rumus {
         return hasil = a + b + c + d;
     }
 
-    public float luasLayangKetupat(float d1, float d2){
-        return hasil = (float) 0.5 * d1 * d2;
+    public float luasLayang(float d1, float d2){
+        return hasil = (d1 * d2) / 2;
     }
 
-    public float kelilingLayangKetupat(float a, float b, float c, float d){
+    public float kelilingLayang(float a, float b, float c, float d){
         return hasil = a + b + c + d;
     }
 

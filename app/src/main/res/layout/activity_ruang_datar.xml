@@ -11,7 +11,7 @@
         android:background="@color/green"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.RuangBangunActivity"
+        tools:context=".activities.RuangDatarActivity"
         >
 
 
@@ -51,6 +51,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
+            android:onClick="handlerClickPersegiActivity"
             android:text="Persegi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,6 +68,7 @@
             android:layout_marginRight="50dp"
             android:background="@color/white"
             android:text="Persegi Panjang"
+            android:onClick="handlerClickPersegiPanjangActivity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_persegi" />
@@ -82,6 +84,7 @@
             android:layout_marginRight="50dp"
             android:background="@color/white"
             android:text="segitiga siku siku"
+            android:onClick="handlerClickSegitigaSikuActivity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_persegi_panjang" />
@@ -96,7 +99,8 @@
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             android:background="@color/white"
-            android:text="segitiga sama kaki dan sama sisi"
+            android:text="segitiga sama sisi"
+            android:onClick="handlerClickSegitigaKakiSisiActivity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_segitiga_siku" />
@@ -112,6 +116,7 @@
             android:layout_marginRight="50dp"
             android:background="@color/white"
             android:text="Jajaran Genjang"
+            android:onClick="handlerClickJajarGenjangActivity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_segitiga" />
@@ -127,6 +132,7 @@
             android:layout_marginRight="50dp"
             android:background="@color/white"
             android:text="trapesium"
+            android:onClick="handlerClickTrapesiumActivity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_jajaran_genjang" />
@@ -141,7 +147,8 @@
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             android:background="@color/white"
-            android:text="layang layang dan belah ketupat"
+            android:text="layang layang Layang"
+            android:onClick="handlerClickLayangKetupatActivity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_trapesium" />
@@ -158,6 +165,7 @@
             android:layout_marginBottom="20dp"
             android:background="@color/white"
             android:text="lingkaran"
+            android:onClick="handlerClickLingkaranActivity"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -7,6 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 
 import polinema.ac.id.rumusbangun.R;
+import polinema.ac.id.rumusbangun.activities.RuangBangun.BalokActivity;
+import polinema.ac.id.rumusbangun.activities.RuangBangun.BolaActivity;
+import polinema.ac.id.rumusbangun.activities.RuangBangun.KerucutActivity;
+import polinema.ac.id.rumusbangun.activities.RuangBangun.KubusActivity;
+import polinema.ac.id.rumusbangun.activities.RuangBangun.LimasActivity;
+import polinema.ac.id.rumusbangun.activities.RuangBangun.PrismaActivity;
+import polinema.ac.id.rumusbangun.activities.RuangBangun.TabungActivity;
 
 public class RuangBangunActivity extends AppCompatActivity {
 

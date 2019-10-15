@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.RuangBangun.BalokActivity">
+        tools:context=".activities.RuangDatar.PersegiPanjangActivity">
 
         <Button
             android:id="@+id/btn_lpKubus"
@@ -21,10 +21,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
-            android:onClick="handlerClickLPBalok"
+            android:onClick="handlerClickLuasPersegiPanjang"
             android:layout_marginRight="30dp"
             android:background="@color/white"
-            android:text="Luas Permukaan"
+            android:text="Luas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -34,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/white"
-            android:text="Balok"
+            android:text="Persegi Panjang"
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.44" />
+            app:layout_constraintGuide_percent="0.3" />
 
         <Button
             android:id="@+id/btn_vKubus"
@@ -65,14 +65,14 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:background="@color/white"
-            android:onClick="handlerClickVBalok"
-            android:text="Volume"
+            android:onClick="handlerClickKelilingPersegiPanjang"
+            android:text="Keliling"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_lpKubus" />
 
         <FrameLayout
-            android:id="@+id/frame_balok"
+            android:id="@+id/frame_persegiPanjang"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
@@ -92,39 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="999dp" />
-
-        <Button
-            android:id="@+id/btn_dgBalok"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@color/white"
-            android:onClick="handlerClickDgBalok"
-            android:text="Diagonal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_vKubus" />
-
-        <Button
-            android:id="@+id/btn_klBalok"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@color/white"
-            android:onClick="handlerClickKlBalok"
-            android:text="Keliling"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_dgBalok" />
+            app:layout_constraintGuide_begin="846dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

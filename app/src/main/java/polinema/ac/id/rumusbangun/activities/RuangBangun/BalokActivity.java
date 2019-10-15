@@ -1,4 +1,4 @@
-package polinema.ac.id.rumusbangun.activities;
+package polinema.ac.id.rumusbangun.activities.RuangBangun;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import polinema.ac.id.rumusbangun.R;
+import polinema.ac.id.rumusbangun.activities.MenuActivity;
 import polinema.ac.id.rumusbangun.fragments.balok.DiagonalBalok;
 import polinema.ac.id.rumusbangun.fragments.HasilFragment;
 import polinema.ac.id.rumusbangun.fragments.balok.KelilingBalok;

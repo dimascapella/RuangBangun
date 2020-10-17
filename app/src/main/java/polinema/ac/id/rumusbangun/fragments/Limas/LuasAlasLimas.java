@@ -27,7 +27,7 @@ public class LuasAlasLimas extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public LuasAlasLimas() {
-        // Required empty public constructor
+       
     }
 
 
